@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="Netflix.Netflixtest.NetflixTest">
+        <methods>
+          <include name="irURl"/>
+          <include name="setUp"/>
+          <include name="fakeEmailTest"/>
+          <include name="validarTitulo"/>
+          <include name="maxVentana"/>
+          <include name="starSessionPageTest"/>
+          <include name="loginToNetflixErrorTest"/>
+        </methods>
+      </class> <!-- Netflix.Netflixtest.NetflixTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
