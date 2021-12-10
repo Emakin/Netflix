@@ -29,6 +29,7 @@ public class NetflixTest {
 	WebDriver driver;
 	
 	
+	
 	@BeforeSuite
 	public void setUp() {
 		//configuración de las propiedades del chrome Driver
@@ -121,23 +122,19 @@ public class NetflixTest {
 		LadingPage ladingpage = new LadingPage(driver);
 		ladingpage.esperaImplicita();
 		ladingpage.clickOnInputEmail();
-		
-		
 		//Genero un email random
-		Random randomGenerator = new Random();  
-		int randomInt = randomGenerator.nextInt(1000);  
-		String email = "username"+ randomInt +"@gmail.com";
+		String email = ladingpage.randomEmail();
+		
 		ladingpage.setEmail(email);
-		
-		System.out.println(email);
-		
 		
 		ladingpage.clickOnButtonStart();
 		ladingpage.esperaImplicita();
-
+		System.out.println(email);
+		
 		//Valido que dentro de la url se encuentre la palabra signup
 		String currentURL = driver.getCurrentUrl();
 		assertTrue(currentURL.contains("signup"));
+		
 			
 }
 	@Test
@@ -153,8 +150,13 @@ public class NetflixTest {
 		}else {
 			System.out.println("No se encuentra elementos con está etiqueta");
 		}
+		
 	}
 	
-	
+	@AfterTest
+	public void closed() {
+		driver.close();
+	}
 	
 }
+

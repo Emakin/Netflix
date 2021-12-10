@@ -6,12 +6,10 @@
       <class name="Netflix.Netflixtest.NetflixTest">
         <methods>
           <include name="irURl"/>
+          <include name="closed"/>
           <include name="setUp"/>
           <include name="fakeEmailTest"/>
-          <include name="validarTitulo"/>
           <include name="maxVentana"/>
-          <include name="starSessionPageTest"/>
-          <include name="loginToNetflixErrorTest"/>
         </methods>
       </class> <!-- Netflix.Netflixtest.NetflixTest -->
     </classes>

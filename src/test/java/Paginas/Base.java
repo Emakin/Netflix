@@ -1,5 +1,7 @@
 package Paginas;
 
+import java.util.Random;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,6 +38,14 @@ public class Base {
 			return false;
 		}
 
+	}
+	
+	public String randomEmail() {
+		Random randomGenerator = new Random();  
+		int randomInt = randomGenerator.nextInt(1000);  
+		 String email = "username"+ randomInt +"@fakegmail.com";
+		 return email;
+		
 	}
 	
 }
